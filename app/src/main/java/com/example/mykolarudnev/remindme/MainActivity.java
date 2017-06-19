@@ -2,7 +2,6 @@ package com.example.mykolarudnev.remindme;
 
 
 import android.os.Bundle;
-
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -12,9 +11,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TableLayout;
 
-import com.example.mykolarudnev.remindme.adapter.TabsPagerFragmentAdapter;
+import com.example.mykolarudnev.remindme.adapter.TabsFragmentAdapter;
 
 /**
  * Created by Николай on 03.06.2017.
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
          TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
 
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(getApplicationContext(),getSupportFragmentManager());
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

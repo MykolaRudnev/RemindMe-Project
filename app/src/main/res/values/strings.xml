@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">RemindMe Beta</string>
     <string name="serch_title">Serch</string>
-    <string name="menu_item_notiffication">Напоминание</string>
+
     <string name="view_navigation_open">Open</string>
     <string name="view_navigation_close">Close</string>
+
+
+    <string name="Tab_item_history">History</string>
+    <string name="Tab_item_ideas">Ideas</string>
+    <string name="Tab_item_todo">TODO</string>
+    <string name="Tab_item_birthdays">Birthdays</string>
+    <string name="menu_item_notiffication"> Ideas </string>
+
+
 </resources>
