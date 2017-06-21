@@ -41,7 +41,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     />
         <android.support.design.widget.FloatingActionButton
-
+            xmlns:app= "http://schemas.android.com/apk/res-auto"
             android:id="@+id/fab"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
@@ -49,6 +49,8 @@
             android:layout_gravity="end|bottom"
             android:layout_marginBottom="@dimen/fab_magrin"
             android:layout_marginRight="@dimen/fab_magrin"
+            app:backgroundTint="@color/colorPrimary"
+
             />
 
     </android.support.design.widget.CoordinatorLayout>
