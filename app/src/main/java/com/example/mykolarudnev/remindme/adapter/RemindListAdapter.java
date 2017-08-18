@@ -8,29 +8,32 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 import com.example.mykolarudnev.remindme.R;
 import com.example.mykolarudnev.remindme.dto.RemindDto;
 
 import java.util.List;
 
-public class RemindListAdapter extends  RecyclerView.Adapter<RemindListAdapter.ReminfViewHolder> {
+
+public class RemindListAdapter extends  RecyclerView.Adapter<RemindListAdapter.RemindViewHolder> {
 
     private List<RemindDto> data;
+
 
     public RemindListAdapter(List<RemindDto> data) {
         this.data = data;
     }
 
     @Override
-    public ReminfViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RemindViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
          View view =LayoutInflater.from(parent.getContext()).inflate(R.layout.remind_item,parent,false);
 
 
-        return  new ReminfViewHolder(view);
+        return  new RemindViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ReminfViewHolder holder, int position) {
+    public void onBindViewHolder(RemindViewHolder holder, int position) {
 
         RemindDto item= data.get(position);
         holder.title.setText(item.getTitle());
@@ -42,12 +45,16 @@ public class RemindListAdapter extends  RecyclerView.Adapter<RemindListAdapter.R
         return data.size();
     }
 
-    public static class ReminfViewHolder extends RecyclerView.ViewHolder{
+    public void setData(List<RemindDto> data) {
+        this.data = data;
+    }
+
+    public static class RemindViewHolder extends RecyclerView.ViewHolder{
         CardView cardView;
         TextView title;
 
 
-        public ReminfViewHolder(View itemView ) {
+        public RemindViewHolder(View itemView ) {
             super(itemView);
 
             cardView = (CardView) itemView.findViewById(R.id.cardView);
@@ -55,5 +62,7 @@ public class RemindListAdapter extends  RecyclerView.Adapter<RemindListAdapter.R
 
         }
     }
+
+
 
 }
